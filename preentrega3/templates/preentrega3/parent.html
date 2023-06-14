@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Pre Entrega 3 Python</title>
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}"/>
+        <link href="{% static 'css/index.css' %}" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="h-screen flex flex-col items-center py-4">
+        <div class="w-1/2 h-full flex flex-col justify-between border-2 p-4 rounded-md space-y-4 overflow-y-scroll" id="main">
+            <div class="flex place-content-evenly items-center h-12">
+                <a class="bg-zinc-50 hover:bg-orange-100 transition border-2 border-orange-300 py-1 px-3 rounded-lg" aria-current="page" href="{% url 'Index' %}">Home</a>
+                <a class="bg-zinc-50 hover:bg-orange-100 transition border-2 border-orange-300 py-1 px-3 rounded-lg" href="{% url 'Students Form' %}">Students</a>
+                <a class="bg-zinc-50 hover:bg-orange-100 transition border-2 border-orange-300 py-1 px-3 rounded-lg" href="{% url 'Courses Form' %}">Courses</a>
+                <a class="bg-zinc-50 hover:bg-orange-100 transition border-2 border-orange-300 py-1 px-3 rounded-lg" href="{% url 'Professors Form' %}">Professors</a>
+            </div>
+            <div class="w-full text-center text-2xl">Education institution management app</div>
+            {% block home %}
+            {% endblock home %}
+
+            {% block students_form %}
+            {% endblock students_form %}
+
+            {% block courses_form %}
+            {% endblock courses_form %}
+
+            {% block professors_form %}
+            {% endblock professors_form %}
+
+            {% block professors_search %}
+            {% endblock professors_search %}
+            <footer class="py-5 bg-gray-200 rounded-md">
+                <p class="text-center text-gray-800">Coderhouse 2023 &copy;</p>
+            </footer>
+            <script src="{% static './js/scripts.js' %}"></script>
+        </div>
+    </body>
+</html>
