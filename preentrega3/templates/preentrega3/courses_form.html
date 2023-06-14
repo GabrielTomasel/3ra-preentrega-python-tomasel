@@ -22,11 +22,11 @@
         <form class="flex flex-col mt-4 items-center" action="/courses_form/" method = "POST"> {% csrf_token %}
             <div class="mb-3 flex items-center self-start w-full">
                 <label for="formGroupExampleInput" class="mr-2 w-1/4">ID: </label>
-                <input type="text" class="border-2 border-gray-300 rounded-lg pb-1.5 pt-1 px-2 h-[2.2rem] w-full" id="course_id" name="course_id" placeholder="Nombre">
+                <input type="text" class="border-2 border-gray-300 rounded-lg pb-1.5 pt-1 px-2 h-[2.2rem] w-full" id="course_id" name="course_id" placeholder="Course ID">
             </div>
             <div class="mb-3 flex items-center self-start w-full">
                 <label for="formGroupExampleInput" class="mr-2 w-1/4">Type: </label>
-                <input type="text" class="border-2 border-gray-300 rounded-lg pb-1.5 pt-1 px-2 h-[2.2rem] w-full" id="course_type" name="course_type" placeholder="Apellido">
+                <input type="text" class="border-2 border-gray-300 rounded-lg pb-1.5 pt-1 px-2 h-[2.2rem] w-full" id="course_type" name="course_type" placeholder="Course type">
             </div>
             <input type="submit" value="Create" class="cursor-pointer hover:text-orange-300">
         </form>
