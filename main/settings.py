@@ -18,7 +18,8 @@ INSTALLED_APPS = [
     'students',
     'professors',
     'courses',
-    'accounts'
+    'accounts',
+    'comunications'
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,7 @@ USE_I18N = True
 USE_TZ = True
 
 LOGIN_URL = '/login/'
+
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'main', 'static','main')

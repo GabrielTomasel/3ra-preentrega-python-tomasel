@@ -1,0 +1,49 @@
+{% extends "parent.html" %}
+{% load static %}
+
+{% block title %}Message List{% endblock %}
+
+{% block main %}
+{% if error %}
+<div class="flex w-full items-center justify-center">
+    <p class="text-red-500">Message with id: "{{error}}" not found</p>
+</div>
+{% endif %}
+
+{% if search %}
+<div class="flex flex-col border-orange-300 border-2 rounded-lg p-4 space-y-4">
+    
+
+    {% for data in search %}
+    <div class="flex w-full items-center">
+        <div class="flex flex-col w-full">
+            <div class="font-bold flex w-full">
+                <div class="w-1/4">User Name: </div>
+                <div class="font-normal ml-2">{{data.message_name}}</div>
+            </div>
+            <div class="font-bold flex w-full">
+                <div class="w-1/4">Message: </div>
+                <div class="font-normal ml-2">{{data.message}}</div>
+            </div>
+        </div>
+        <div class="flex flex-col">
+            {% if request.user.is_superuser %}
+                <a class="bg-zinc-50 hover:bg-red-100 transition border-2 border-red-300 py-1 px-3 rounded-lg mt-2" href="/comunications_delete/{{data.id}}">Delete</a>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if not forloop.last %}
+    <hr/>
+    {% endif %}
+
+    {% endfor %}
+    
+</div>
+
+<div class="flex justify-center w-full">
+    <a class="bg-zinc-50 hover:bg-orange-100 transition border-2 border-orange-300 py-1 px-3 rounded-lg" href="/comunications_form/">Write message</a>
+</div>
+
+{% endif %}
+{% endblock %}
