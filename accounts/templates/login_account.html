@@ -1,0 +1,12 @@
+{% extends 'parent.html' %}
+{% load static %}
+
+{% block title %} Login {% endblock title %}
+
+{% block main %}
+<form method="POST" class="m-2 space-y-4 [&_input]:border-2 [&_input]:rounded-lg [&_input]:ml-2 [&_input]:pl-2">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login" class="!ml-0 bg-zinc-50 hover:bg-orange-100 transition border-2 border-orange-300 py-1 px-3 rounded-lg">
+    </form>
+{% endblock main %}

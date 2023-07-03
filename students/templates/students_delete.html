@@ -1,0 +1,20 @@
+{% extends "parent.html" %}
+{% load static %}
+
+{% block title %}Delete Student{% endblock %}
+
+{% block main %}
+
+    <div class="container text-center">
+
+    <form method="post" class="flex flex-col mt-4 items-center">{% csrf_token %}
+        <h4>Are you sure to delete student with id: {{student.id}}?</h4>
+        <p>
+            <button type="submit" class="bg-zinc-50 hover:bg-red-100 transition border-2 border-red-300 py-1 px-3 rounded-lg w-[7.1rem] mt-2">Delete</button>
+            <a class="bg-zinc-50 hover:bg-orange-100 transition border-2 border-orange-300 py-[.35rem] px-3 rounded-lg w-[7.1rem]" href="/students">Cancel</a>
+        </p>
+    </form>
+
+    </div>
+
+{% endblock %}
