@@ -7,9 +7,13 @@
 {% block main %}
     <div class="flex flex-col w-full items-center justify-center">
         <div class="text-center text-xl mb-2">
+            {% if user.first_name and user.last_name %}
             {{user.first_name}} {{user.last_name}}
+            {% endif %}
         </div>
+        {% if avatar %}
         <img src={{ avatar.url }} class="w-[200px] rounded-2xl"/>
+        {% endif %}
     </div>
     <form method="POST" class="m-2 space-y-4 [&_p]:space-y-4 [&_input]:border-2 [&_input]:rounded-lg [&_input]:ml-2 [&_input]:pl-2" enctype='multipart/form-data'>
         {% csrf_token %}
