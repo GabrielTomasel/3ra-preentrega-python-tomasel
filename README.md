@@ -4,9 +4,7 @@
 
 Simple app de gestión de usuarios y cursos para una institución educativa.
 
-Modo de uso: ejecutar `python manage.py runserver` y seguir el vínculo provisto.
-
-Previamente se puede ejecutar `python manage.py livereload` para ver cambios en el código actualizados en tiempo real en el navegador.
+Modo de uso: ejecutar `pip install -r requirements.txt` para instalar las dependencias necesarias, luego ejecutar el server con `python manage.py runserver` y seguir el vínculo provisto para ingresar a la app.
 
 <br/>
 
