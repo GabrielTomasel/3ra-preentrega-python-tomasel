@@ -3,4 +3,4 @@ from django.contrib.auth.models import User
 
 class Account(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.ImageField(upload_to='media', null=True, blank=True)
+    avatar = models.ImageField(upload_to='avatars', null=True, blank=True)
