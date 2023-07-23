@@ -37,7 +37,7 @@
             {% elif search|length <= 1 and id != None %}
             <a class="bg-zinc-50 hover:bg-orange-100 transition border-2 border-orange-300 py-1 px-3 rounded-lg w-[7.1rem]" href="/students">Back to list</a>
                 {% if request.user.is_superuser %}
-                    <a class="bg-zinc-50 hover:bg-red-100 transition border-2 border-red-300 py-1 px-3 rounded-lg w-[7.1rem] mt-2" href="/students_delete/{{data.id}}">Delete</a>
+                    <a class="bg-zinc-50 hover:bg-red-100 transition border-2 border-red-300 py-1 px-3 rounded-lg w-[7.1rem] mt-2" href="/students-delete/{{data.id}}">Delete</a>
                 {% endif %}
             {% endif %}
         </div>

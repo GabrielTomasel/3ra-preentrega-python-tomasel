@@ -6,7 +6,7 @@
 {% block main %}
   <div class="border-2 border-orange-300 rounded-lg p-2">
       <p class="text-center">Search Student</p>
-      <form class="flex flex-col mt-4 items-center" action="/students_search/" method="GET">{% csrf_token %}
+      <form class="flex flex-col mt-4 items-center" action="/students-search/" method="GET">{% csrf_token %}
           <div class="mb-3 flex items-center self-start w-full">
               <label for="formGroupExampleInput" class="mr-2 w-1/4">Student: </label>
               <input type="text" class="border-2 border-gray-300 rounded-lg pb-1.5 pt-1 px-2 h-[2.2rem] w-full" id="search" name= "search" placeholder="Name, Last Name, Email">
@@ -22,7 +22,7 @@
   {% if request.user.is_superuser %}
   <div class="border-2 border-orange-300 rounded-lg p-2">
     <p class="text-center">Add new Student</p>
-    <form class="flex flex-col mt-4 items-center" action="/students_form/" method = "POST"> {% csrf_token %}
+    <form class="flex flex-col mt-4 items-center" action="/students-form/" method = "POST"> {% csrf_token %}
         <div class="mb-3 flex items-center self-start w-full">
             <label for="formGroupExampleInput" class="mr-2 w-1/4">Name: </label>
             <input type="text" class="border-2 border-gray-300 rounded-lg pb-1.5 pt-1 px-2 h-[2.2rem] w-full" id="first_name" name="first_name" placeholder="Juan">

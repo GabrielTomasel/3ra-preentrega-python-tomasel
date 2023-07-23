@@ -7,5 +7,5 @@ urlpatterns = [
     path('login/', login_request, name='login'),
     path('logout/', CustomLogoutView.as_view(), name='logout'),
     path('profile/', edit_profile, name='profile'),
-    path("account_delete/<int:pk>", DeleteAccount.as_view(), name="delete_account"),
+    path("account-delete/<int:pk>", DeleteAccount.as_view(), name="delete_account"),
 ]

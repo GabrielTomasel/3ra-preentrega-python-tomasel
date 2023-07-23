@@ -10,7 +10,7 @@
 {% block main %}
     <div class="border-2 border-orange-300 rounded-lg p-2">
         <p class="text-center">Search Course</p>
-        <form class="flex flex-col mt-4 items-center" action="/courses_search/" method="GET">{% csrf_token %}
+        <form class="flex flex-col mt-4 items-center" action="/courses-search/" method="GET">{% csrf_token %}
             <div class="mb-3 flex items-center self-start w-full">
                 <label for="formGroupExampleInput" class="mr-2 w-1/4">Student: </label>
                 <input type="text" class="border-2 border-gray-300 rounded-lg pb-1.5 pt-1 px-2 h-[2.2rem] w-full" id="search" name= "search" placeholder="Course name or id">
@@ -26,7 +26,7 @@
     {% if request.user.is_superuser %}
     <div class="border-2 border-orange-300 rounded-lg p-2">
         <p class="text-center">Add new Course</p>
-        <form class="flex flex-col mt-4 items-center" action="/courses_form/" method = "POST"> {% csrf_token %}
+        <form class="flex flex-col mt-4 items-center" action="/courses-form/" method = "POST"> {% csrf_token %}
             <div class="mb-3 flex items-center self-start w-full">
                 <label for="formGroupExampleInput" class="mr-2 w-1/4">ID: </label>
                 <input type="text" class="border-2 border-gray-300 rounded-lg pb-1.5 pt-1 px-2 h-[2.2rem] w-full" id="course_id" name="course_id" placeholder="Course ID">

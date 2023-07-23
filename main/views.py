@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from django.template import Template, Context, loader
-from .models import * 
 from django.db.models import Q
 from django.shortcuts import render
 from .forms import *
